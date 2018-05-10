@@ -9,7 +9,7 @@ describe('API Caller', () => {
     return ask()
       .then(() => {
         expect(global.fetch).toHaveBeenCalledWith('https://yesno.wtf/api/');
-      })
+      });
   });
   it('should return YesNo response in JSON format', () => {
     global.fetch = jest.fn().mockImplementation(() => Promise.resolve({
